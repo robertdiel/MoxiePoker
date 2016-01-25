@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="iPadVideoPokerViewController">
+            <connections>
+                <outlet property="horzBkg" destination="484" id="485"/>
+                <outlet property="vertBkg" destination="22" id="486"/>
+                <outlet property="view" destination="2" id="277"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2" customClass="VideoPokerView">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background_main_vert.png" id="22" propertyAccessControl="all">
+                    <rect key="frame" x="0.0" y="-25" width="768" height="1024"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_main_horz.png" id="484">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="background_cardWell.png" id="48">
+                    <rect key="frame" x="0.0" y="533" width="768" height="242"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="472" customClass="PokerChipView">
+                    <rect key="frame" x="20" y="804" width="261" height="239"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="win_star_large.png" id="475">
+                            <rect key="frame" x="2" y="0.0" width="259" height="258"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="win_star_small.png" id="477">
+                            <rect key="frame" x="25" y="23" width="213" height="212"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="chip_red_large.png" id="473">
+                            <rect key="frame" x="42" y="39" width="179" height="180"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="chipView" destination="473" id="478"/>
+                        <outlet property="largeGlowView" destination="475" id="479"/>
+                        <outlet property="smallGlowView" destination="477" id="480"/>
+                    </connections>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="5">
+                    <rect key="frame" x="40" y="502" width="688" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="####" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="34">
+                    <rect key="frame" x="102" y="905" width="99" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="33"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="35">
+                    <rect key="frame" x="418" y="789" width="109" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="36">
+                    <rect key="frame" x="60" y="772" width="164" height="69"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <state key="normal" title="Bet +1" backgroundImage="button_large.png">
+                        <color key="titleColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="disabled" title="Bet +1" backgroundImage="button_large_disable.png">
+                        <color key="titleColor" red="0.77998687720000004" green="0.78246008830000002" blue="0.73925925010000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" backgroundImage="button_large_press.png"/>
+                    <state key="highlighted" backgroundImage="button_large_press.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="37">
+                    <rect key="frame" x="230" y="772" width="164" height="69"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <state key="normal" title="Bet Max" backgroundImage="button_large.png">
+                        <color key="titleColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="disabled" backgroundImage="button_large_disable.png">
+                        <color key="titleColor" red="0.77998687720000004" green="0.78246008830000002" blue="0.73925925010000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" backgroundImage="button_large_press.png"/>
+                    <state key="highlighted" backgroundImage="button_large_press.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="38">
+                    <rect key="frame" x="544" y="772" width="164" height="69"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <state key="normal" title="Deal" backgroundImage="button_large.png">
+                        <color key="titleColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="disabled" backgroundImage="button_large_disable.png">
+                        <color key="titleColor" red="0.77998687720000004" green="0.78246008830000002" blue="0.73925925010000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" backgroundImage="button_large_press.png"/>
+                    <state key="highlighted" backgroundImage="button_large_press.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="label_bet.png" id="46">
+                    <rect key="frame" x="449" y="773" width="46" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" image="label_credits.png" id="47">
+                    <rect key="frame" x="249" y="912" width="98" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="86" customClass="CardButtonView">
+                    <rect key="frame" x="52" y="557" width="139" height="176"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="419" customClass="ComposedCardView">
+                            <rect key="frame" x="6" y="6" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_club_generic.png" id="429">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="430">
+                                    <rect key="frame" x="19" y="14" width="50" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                    <color key="textColor" red="1" green="0.024058083559999999" blue="0.01226852153" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="cardImageView" destination="429" id="432"/>
+                                <outlet property="cardValueLabel" destination="430" id="431"/>
+                            </connections>
+                        </view>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" image="card_highlight.png" id="128">
+                            <rect key="frame" x="0.0" y="0.0" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_back.png" id="87">
+                            <rect key="frame" x="6" y="6" width="120" height="165"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hold_lock.png" id="133">
+                            <rect key="frame" x="15" y="145" width="18" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="cardBackView" destination="87" id="412"/>
+                        <outlet property="cardView" destination="419" id="433"/>
+                        <outlet property="glowImageView" destination="128" id="170"/>
+                        <outlet property="lockImageView" destination="133" id="171"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="172" customClass="CardButtonView">
+                    <rect key="frame" x="188" y="557" width="139" height="176"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="434" customClass="ComposedCardView">
+                            <rect key="frame" x="6" y="6" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_club_generic.png" id="436">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="435" propertyAccessControl="all">
+                                    <rect key="frame" x="19" y="14" width="50" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                    <color key="textColor" red="1" green="0.024058083559999999" blue="0.01226852153" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="cardImageView" destination="436" id="438"/>
+                                <outlet property="cardValueLabel" destination="435" id="437"/>
+                            </connections>
+                        </view>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" image="card_highlight.png" id="174">
+                            <rect key="frame" x="0.0" y="0.0" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_back.png" id="175">
+                            <rect key="frame" x="6" y="6" width="120" height="165"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hold_lock.png" id="173">
+                            <rect key="frame" x="15" y="145" width="18" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="cardBackView" destination="175" id="413"/>
+                        <outlet property="cardView" destination="434" id="457"/>
+                        <outlet property="glowImageView" destination="174" id="179"/>
+                        <outlet property="lockImageView" destination="173" id="177"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="181" customClass="CardButtonView">
+                    <rect key="frame" x="320" y="557" width="139" height="176"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="439" customClass="ComposedCardView">
+                            <rect key="frame" x="6" y="6" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_club_generic.png" id="441">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="440">
+                                    <rect key="frame" x="19" y="14" width="50" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                    <color key="textColor" red="1" green="0.024058083559999999" blue="0.01226852153" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="cardImageView" destination="441" id="442"/>
+                                <outlet property="cardValueLabel" destination="440" id="443"/>
+                            </connections>
+                        </view>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" image="card_highlight.png" id="183">
+                            <rect key="frame" x="0.0" y="0.0" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_back.png" id="184">
+                            <rect key="frame" x="6" y="6" width="120" height="165"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hold_lock.png" id="182">
+                            <rect key="frame" x="15" y="145" width="18" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="cardBackView" destination="184" id="415"/>
+                        <outlet property="cardView" destination="439" id="456"/>
+                        <outlet property="glowImageView" destination="183" id="186"/>
+                        <outlet property="lockImageView" destination="182" id="189"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="190" customClass="CardButtonView">
+                    <rect key="frame" x="452" y="557" width="139" height="176"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="444" customClass="ComposedCardView">
+                            <rect key="frame" x="6" y="6" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_club_generic.png" id="446">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="445">
+                                    <rect key="frame" x="19" y="14" width="50" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                    <color key="textColor" red="1" green="0.024058083559999999" blue="0.01226852153" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="cardImageView" destination="446" id="447"/>
+                                <outlet property="cardValueLabel" destination="445" id="448"/>
+                            </connections>
+                        </view>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" image="card_highlight.png" id="192">
+                            <rect key="frame" x="0.0" y="0.0" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_back.png" id="193">
+                            <rect key="frame" x="6" y="6" width="120" height="165"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hold_lock.png" id="191">
+                            <rect key="frame" x="15" y="145" width="18" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="cardBackView" destination="193" id="416"/>
+                        <outlet property="cardView" destination="444" id="455"/>
+                        <outlet property="glowImageView" destination="192" id="197"/>
+                        <outlet property="lockImageView" destination="191" id="196"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="199" customClass="CardButtonView">
+                    <rect key="frame" x="585" y="557" width="139" height="176"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="449" customClass="ComposedCardView">
+                            <rect key="frame" x="6" y="6" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_club_generic.png" id="451">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="450">
+                                    <rect key="frame" x="19" y="14" width="50" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                    <color key="textColor" red="1" green="0.024058083559999999" blue="0.01226852153" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="cardImageView" destination="451" id="452"/>
+                                <outlet property="cardValueLabel" destination="450" id="453"/>
+                            </connections>
+                        </view>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" image="card_highlight.png" id="201">
+                            <rect key="frame" x="0.0" y="0.0" width="139" height="176"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card_back.png" id="202">
+                            <rect key="frame" x="6" y="6" width="120" height="165"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hold_lock.png" id="200">
+                            <rect key="frame" x="15" y="145" width="18" height="20"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="cardBackView" destination="202" id="417"/>
+                        <outlet property="cardView" destination="449" id="454"/>
+                        <outlet property="glowImageView" destination="201" id="213"/>
+                        <outlet property="lockImageView" destination="200" id="204"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="268" customClass="PayTableView">
+                    <rect key="frame" x="40" y="63" width="688" height="433"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="269">
+                            <rect key="frame" x="0.0" y="8" width="688" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="scoring_bg.png" id="272">
+                            <rect key="frame" x="0.0" y="0.0" width="688" height="434"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scoring_currentColumn.png" id="1256">
+                            <rect key="frame" x="275" y="45" width="77" height="334"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="CurrentPayTableLabel" destination="269" id="270"/>
+                        <outlet property="PayOutHighlight" destination="1256" id="1257"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="280" customClass="StatsView">
+                    <rect key="frame" x="40" y="63" width="688" height="434"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Games Won:" lineBreakMode="tailTruncation" minimumFontSize="10" id="287">
+                            <rect key="frame" x="142" y="88" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Games Lost:" lineBreakMode="tailTruncation" minimumFontSize="10" id="288">
+                            <rect key="frame" x="142" y="122" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Credits Won:" lineBreakMode="tailTruncation" minimumFontSize="10" id="289">
+                            <rect key="frame" x="142" y="255" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Credits Wagered:" lineBreakMode="tailTruncation" minimumFontSize="10" id="290">
+                            <rect key="frame" x="142" y="221" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Longest Winning Streak:" lineBreakMode="tailTruncation" minimumFontSize="10" id="291">
+                            <rect key="frame" x="142" y="154" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Longest Losing Steak:" lineBreakMode="tailTruncation" minimumFontSize="10" id="292">
+                            <rect key="frame" x="142" y="187" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Most Credits Won:" lineBreakMode="tailTruncation" minimumFontSize="10" id="293">
+                            <rect key="frame" x="142" y="289" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Payout Percent:" lineBreakMode="tailTruncation" minimumFontSize="10" id="1252">
+                            <rect key="frame" x="142" y="319" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="295" propertyAccessControl="none">
+                            <rect key="frame" x="369" y="88" width="175" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="296" propertyAccessControl="none">
+                            <rect key="frame" x="369" y="122" width="175" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="297" propertyAccessControl="none">
+                            <rect key="frame" x="369" y="255" width="175" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="298" propertyAccessControl="none">
+                            <rect key="frame" x="369" y="221" width="175" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="299" propertyAccessControl="none">
+                            <rect key="frame" x="369" y="154" width="175" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="300" propertyAccessControl="none">
+                            <rect key="frame" x="369" y="187" width="175" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="301" propertyAccessControl="none">
+                            <rect key="frame" x="369" y="289" width="175" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="1251" propertyAccessControl="none">
+                            <rect key="frame" x="369" y="319" width="175" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="461">
+                            <rect key="frame" x="139" y="83" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="462">
+                            <rect key="frame" x="139" y="117" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="463">
+                            <rect key="frame" x="139" y="148" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="464">
+                            <rect key="frame" x="139" y="180" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="465">
+                            <rect key="frame" x="139" y="215" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="466">
+                            <rect key="frame" x="139" y="247" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="467">
+                            <rect key="frame" x="139" y="281" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="468">
+                            <rect key="frame" x="139" y="315" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" image="scoring_line.png" id="1250">
+                            <rect key="frame" x="139" y="345" width="410" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="center" image="scoring_bg.png" id="469">
+                            <rect key="frame" x="0.0" y="0.0" width="688" height="434"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="BackButton" destination="284" id="285"/>
+                        <outlet property="CreditsLost" destination="290" id="312"/>
+                        <outlet property="CreditsLostValue" destination="298" id="305"/>
+                        <outlet property="CreditsWon" destination="289" id="313"/>
+                        <outlet property="CreditsWonValue" destination="297" id="308"/>
+                        <outlet property="GamesLost" destination="288" id="314"/>
+                        <outlet property="GamesLostValue" destination="296" id="303"/>
+                        <outlet property="GamesWon" destination="287" id="294"/>
+                        <outlet property="GamesWonValue" destination="295" id="302"/>
+                        <outlet property="LongestLoseStreak" destination="292" id="315"/>
+                        <outlet property="LongestLoseStreakValue" destination="300" id="310"/>
+                        <outlet property="LongestWinStreak" destination="291" id="316"/>
+                        <outlet property="LongestWinStreakValue" destination="299" id="309"/>
+                        <outlet property="MostCreditsWon" destination="293" id="317"/>
+                        <outlet property="MostCreditsWonValue" destination="301" id="311"/>
+                        <outlet property="PercentPayoutValue" destination="1251" id="1254"/>
+                    </connections>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="278">
+                    <rect key="frame" x="383" y="461" width="341" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <state key="normal" title="Scoring stats" backgroundImage="scoring_tab_right_inactive.png">
+                        <color key="titleColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled" backgroundImage="scoring_tab_right_inactive.png">
+                        <color key="titleColor" red="0.77998687720000004" green="0.78246008830000002" blue="0.73925925010000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" backgroundImage="scoring_tab_right_active.png"/>
+                    <state key="highlighted" backgroundImage="scoring_tab_right_active.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="284">
+                    <rect key="frame" x="42" y="451" width="341" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                    <state key="normal" title="Pay table" backgroundImage="scoring_tab_left_inactive.png">
+                        <color key="titleColor" red="0.77890199660000004" green="0.78246008830000002" blue="0.20213006680000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled" backgroundImage="scoring_tab_left_inactive.png">
+                        <color key="titleColor" red="0.77998687720000004" green="0.78246008830000002" blue="0.73925925010000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" backgroundImage="scoring_tab_left_active.png"/>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="success3.png" id="1247">
+                    <rect key="frame" x="232" y="647" width="304" height="61"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <connections>
+                <outlet property="Bet1Button" destination="36" id="41"/>
+                <outlet property="BetLabel" destination="35" id="42"/>
+                <outlet property="BetTextLabel" destination="46" id="1239"/>
+                <outlet property="Card1" destination="86" id="92"/>
+                <outlet property="Card2" destination="172" id="208"/>
+                <outlet property="Card3" destination="181" id="209"/>
+                <outlet property="Card4" destination="190" id="210"/>
+                <outlet property="Card5" destination="199" id="211"/>
+                <outlet property="CardWellView" destination="48" id="1238"/>
+                <outlet property="CreditBank" destination="34" id="43"/>
+                <outlet property="CreditsTextLabel" destination="47" id="1240"/>
+                <outlet property="DrawButton" destination="38" id="40"/>
+                <outlet property="MaxButton" destination="37" id="39"/>
+                <outlet property="SuccessImage" destination="1247" id="1248"/>
+                <outlet property="WinLabel" destination="5" id="33"/>
+                <outlet property="payTableButton" destination="284" id="1237"/>
+                <outlet property="payTablePanel" destination="268" id="271"/>
+                <outlet property="pokerChipView" destination="472" id="481"/>
+                <outlet property="statsButton" destination="278" id="283"/>
+                <outlet property="statsPanel" destination="280" id="282"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="background_cardWell.png" width="693" height="228"/>
+        <image name="background_main_horz.png" width="1024" height="768"/>
+        <image name="background_main_vert.png" width="768" height="1024"/>
+        <image name="button_large.png" width="164" height="69"/>
+        <image name="button_large_disable.png" width="164" height="69"/>
+        <image name="button_large_press.png" width="164" height="69"/>
+        <image name="card_back.png" width="120" height="165"/>
+        <image name="card_club_generic.png" width="120" height="165"/>
+        <image name="card_highlight.png" width="132" height="177"/>
+        <image name="chip_red_large.png" width="179" height="180"/>
+        <image name="hold_lock.png" width="6" height="7"/>
+        <image name="label_bet.png" width="36" height="11"/>
+        <image name="label_credits.png" width="87" height="12"/>
+        <image name="scoring_bg.png" width="684" height="428"/>
+        <image name="scoring_currentColumn.png" width="77" height="334"/>
+        <image name="scoring_line.png" width="620" height="1"/>
+        <image name="scoring_tab_left_active.png" width="341" height="32"/>
+        <image name="scoring_tab_left_inactive.png" width="341" height="32"/>
+        <image name="scoring_tab_right_active.png" width="341" height="32"/>
+        <image name="scoring_tab_right_inactive.png" width="341" height="32"/>
+        <image name="success3.png" width="304" height="61"/>
+        <image name="win_star_large.png" width="259" height="258"/>
+        <image name="win_star_small.png" width="213" height="212"/>
+    </resources>
+</document>
