@@ -19,16 +19,17 @@
 	[super viewDidLoad];
 	
 
-	CGRect frame = CGRectMake(0.0, 0, 1024, 48);
+	CGRect frame = CGRectMake(0.0, 0, 1024, 49);
 	
 	UIView *v = [[UIView alloc] initWithFrame:frame];
-	
+    
     //TODO: sample background color, change to that and make the tabs black on white
-	[v setBackgroundColor:[[UIColor alloc] initWithRed:0.0
-												 green:1.0
-												  blue:0.0
-												 alpha:0.25]];
-	
+	[v setBackgroundColor:[[UIColor alloc] initWithRed:43.0/255.0
+                                                 green:77.0/255.0
+												  blue:34.0/255.0
+												 alpha:1.0]];
+    
+//    [tabBar1 setTintColor:[UIColor clearColor]];
 	[tabBar1 insertSubview:v atIndex:0];
 	[v release];
 }
