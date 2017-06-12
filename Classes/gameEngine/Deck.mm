@@ -56,6 +56,9 @@ void Deck::shuffle()
     traceDeck();
 #endif
 }
+
+//NOTE: The deck is reshuffled every game, so the most cards possibly used is 10.  This method will not work if the
+//      cards are not reshuffled everytime
 PlayingCard* Deck::getNextCard()
 {
     

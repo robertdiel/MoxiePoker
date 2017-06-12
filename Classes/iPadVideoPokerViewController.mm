@@ -137,27 +137,28 @@
 }
 - (void) playSoundByName:(NSString*)name andLoop:(Boolean)yesOrNo atVolume:(float)volume
 {
-	BOOL playSound = [saveState readUserBoolValueForKey:@"soundFXOn"];
-	if(playSound == YES)
-	{
-		NSError *error;
-		NSString* fileURLString = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], name];
-		NSURL *url = [NSURL fileURLWithPath:fileURLString];
-		[audioPlayer release];
-		audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-		audioPlayer.volume = volume;
-		if (yesOrNo == true)
-		{
-			audioPlayer.numberOfLoops = -1;
-		}
-		else 
-		{
-			audioPlayer.numberOfLoops = 0;
+    BOOL playSound = [saveState readUserBoolValueForKey:@"soundFXOn"];
+    if(playSound == YES)
+    {
+        NSError *error;
+        NSString* fileURLString = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], name];
+        NSURL *url = [NSURL fileURLWithPath:fileURLString];
+        [audioPlayer stop];
+        [audioPlayer release];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        audioPlayer.volume = volume;
+        if (yesOrNo == true)
+        {
+            audioPlayer.numberOfLoops = -1;
+        }
+        else 
+        {
+            audioPlayer.numberOfLoops = 0;
 
-		}
+        }
 
-		[audioPlayer play];
-	}
+        [audioPlayer play];
+    }
 }
 
 - (void) HandleBet1ButtonPress:(id)sender 
@@ -189,15 +190,15 @@
 	//set draw/deal button state and handle the game play
 	string newTitle = controller->DrawDealButtonPressed();
 	
-	[self playSoundByName:@"button_press10.aif" andLoop:false atVolume:0.4];
-	
+    [self playSoundByName:@"button_press10.aif" andLoop:false atVolume:0.4];
+    
 	[(VideoPokerView*)self.view enableDealDrawButton:NO];
 
 	//in the middle of the game.
 	if(newTitle == "Draw")
 	{
-		[self playSoundByName:@"deal.aif" andLoop:false atVolume:1.0];
-		
+        [self playSoundByName:@"deal.aif" andLoop:false atVolume:1.0];
+        
 		betHandling.EscrowBet();
         
 		//Display that bet has been spent

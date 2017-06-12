@@ -117,19 +117,19 @@ void uncaughtExceptionHandler(NSException *exception) {
 - (void) playMusicTrack
 {
 
-	NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/ambient_loop_final_01.m4a", [[NSBundle mainBundle] resourcePath]]];
-	
-	NSError *error;
-	
-	musicAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-	musicAudioPlayer.numberOfLoops = -1;
-	musicAudioPlayer.volume = .5;
-	[musicAudioPlayer play];
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/ambient_loop_final_01.m4a", [[NSBundle mainBundle] resourcePath]]];
+    
+    NSError *error;
+    
+    musicAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    musicAudioPlayer.numberOfLoops = -1;
+    musicAudioPlayer.volume = .5;
+    [musicAudioPlayer play];
 
-	if ([saveState readUserBoolValueForKey:@"musicOn"] == NO)
-	{
-		[musicAudioPlayer pause];
-	}
+    if ([saveState readUserBoolValueForKey:@"musicOn"] == NO)
+    {
+        [musicAudioPlayer pause];
+    }
 
 
 }

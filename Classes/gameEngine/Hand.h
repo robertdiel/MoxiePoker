@@ -44,6 +44,7 @@ private:
 	static HandUnitTester* pinstance;
 	
 	static int currentHand;
+    static PlayingCard randoHando[5];
 	static PlayingCard straightArray[5];
 	static PlayingCard straightFlushArray[5];	
 	static PlayingCard flushArray[5];

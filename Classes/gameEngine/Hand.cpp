@@ -92,6 +92,8 @@ void Hand::DebugPrintOut()
 }
 
 #ifdef UNITTEST_HANDS
+PlayingCard HandUnitTester::randoHando[5]      = {PlayingCard(DIAMOND,ACE_13), PlayingCard(CLUB, TWO),PlayingCard(CLUB,NINE),PlayingCard(HEART,QUEEN),PlayingCard(CLUB,KING)};
+
 PlayingCard HandUnitTester::straightArray[5]      = {PlayingCard(DIAMOND,FOUR), PlayingCard(CLUB, TWO),PlayingCard(CLUB,ACE_13),PlayingCard(CLUB,THREE),PlayingCard(CLUB,FIVE)};
 PlayingCard HandUnitTester::flushArray[5]         = {PlayingCard(CLUB,SEVEN), PlayingCard(CLUB, TWO),PlayingCard(CLUB,ACE_13),PlayingCard(CLUB,THREE),PlayingCard(CLUB,FIVE)};
 PlayingCard HandUnitTester::straightFlushArray[5] = {PlayingCard(CLUB,FOUR), PlayingCard(CLUB, TWO),PlayingCard(CLUB,ACE_13),PlayingCard(CLUB,THREE),PlayingCard(CLUB,FIVE)};
@@ -101,7 +103,7 @@ PlayingCard HandUnitTester::threeOfAKindArray[5]  = {PlayingCard(CLUB,TEN), Play
 PlayingCard HandUnitTester::twoPairArray[5]       = {PlayingCard(CLUB,ACE_13), PlayingCard(CLUB, JACK),PlayingCard(HEART,ACE_13),PlayingCard(HEART,JACK),PlayingCard(CLUB,KING)};
 PlayingCard HandUnitTester::fullHouseArray[5]     = {PlayingCard(CLUB,ACE_13), PlayingCard(SPADE, ACE_13),PlayingCard(HEART,ACE_13),PlayingCard(CLUB,TWO),PlayingCard(HEART,TWO)};
 PlayingCard HandUnitTester::jacksOrBetterArray[5] = {PlayingCard(CLUB,TEN), PlayingCard(CLUB, JACK),PlayingCard(HEART,JACK),PlayingCard(CLUB,QUEEN),PlayingCard(CLUB,KING)};
-PlayingCard* HandUnitTester::unitTestArray[]      = {royalFlushArray, royalFlushArray, straightFlushArray, straightArray, flushArray, fourOfAKindArray, fullHouseArray,threeOfAKindArray,twoPairArray,jacksOrBetterArray };
+PlayingCard* HandUnitTester::unitTestArray[]      = {randoHando, royalFlushArray, royalFlushArray, straightFlushArray, straightArray, flushArray, fourOfAKindArray, fullHouseArray,threeOfAKindArray,twoPairArray,jacksOrBetterArray };
 #define sizeOF_unitTestArray sizeof(HandUnitTester::unitTestArray) / sizeof(PlayingCard*)
 
 HandUnitTester* HandUnitTester::pinstance = 0;// initialize pointer

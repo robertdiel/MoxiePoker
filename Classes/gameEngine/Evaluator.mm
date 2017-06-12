@@ -99,7 +99,8 @@ void Evaluator::buildRunHandStat(vector<CardValue>& cardvalues)
 		if(*(mycarditr) == TWO)
 		{
 			tempCardValueVector.insert(mycarditr,ACE);
-			tempCardValueVector.erase(tempCardValueVector.end());
+//            tempCardValueVector.erase(tempCardValueVector.end());
+            tempCardValueVector.pop_back();
 		}
 	}
 	mycarditr=tempCardValueVector.begin();
@@ -194,7 +195,9 @@ void Evaluator::buildSetsHandStat(vector<CardValue>& cardvalues )
 		mycarditr != cardvalues.end();
 		mycarditr++)
 	{
-		
+#ifdef POKERPAD_TRACE_EVALUATION
+        cout << "ITERATE OuterCard VALUES: " << endl;
+#endif
 		vector<CardValue>::iterator innerItr;
 		vector<int> tempP;
 		int matchcount = 0;
@@ -202,7 +205,9 @@ void Evaluator::buildSetsHandStat(vector<CardValue>& cardvalues )
 			innerItr != cardvalues.end();
 			innerItr++)
 		{
-			
+#ifdef POKERPAD_TRACE_EVALUATION
+            cout << "ITERATE Inner Card VALUES: " << endl;
+#endif
 			if(*mycarditr == *innerItr)
 			{
 				matchcount++;
