@@ -17,6 +17,7 @@
 		28D7ACF80DDB3853001CB0EB /* iPadVideoPokerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iPadVideoPokerViewController.mm */; };
 		8EBB6D5C11FCCB4C00741D8E /* SettingsPopoverViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB6D5A11FCCB4C00741D8E /* SettingsPopoverViewController.mm */; };
 		8EBB6D5D11FCCB4C00741D8E /* SettingsPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBB6D5B11FCCB4C00741D8E /* SettingsPopoverViewController.xib */; };
+		9A5157FC1EEF0827005CA642 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A5157FB1EEF0827005CA642 /* Images.xcassets */; };
 		9D0A835D1174DB7700B48688 /* lose1.aif in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A83561174DB7700B48688 /* lose1.aif */; };
 		9D0A835E1174DB7700B48688 /* menu_press1.aif in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A83571174DB7700B48688 /* menu_press1.aif */; };
 		9D0A835F1174DB7700B48688 /* menu_press2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 9D0A83581174DB7700B48688 /* menu_press2.aif */; };
@@ -85,7 +86,6 @@
 		E355DC2A1166785A00D0D2C7 /* GameSelectionView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E355DC291166785A00D0D2C7 /* GameSelectionView.mm */; };
 		E35840ED1168304D009D6D08 /* PayTableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E35840EC1168304D009D6D08 /* PayTableView.mm */; };
 		E364843D1178DF36003E8F01 /* ComposedCardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E364843C1178DF36003E8F01 /* ComposedCardView.mm */; };
-		E36622571185201600877255 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36622561185201600877255 /* Entitlements.plist */; };
 		E36BEC7711951C4F00EF0604 /* TextColumnView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E36BEC7611951C4F00EF0604 /* TextColumnView.mm */; };
 		E3826A1A115756E1006A6E37 /* VideoPokerView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E3826A19115756E1006A6E37 /* VideoPokerView.mm */; };
 		E38874C5115B23D1008CC076 /* DealButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = E38874C4115B23D1008CC076 /* DealButtonActive.png */; };
@@ -128,6 +128,8 @@
 		8EBB6D5911FCCB4C00741D8E /* SettingsPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPopoverViewController.h; sourceTree = "<group>"; };
 		8EBB6D5A11FCCB4C00741D8E /* SettingsPopoverViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SettingsPopoverViewController.mm; sourceTree = "<group>"; };
 		8EBB6D5B11FCCB4C00741D8E /* SettingsPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsPopoverViewController.xib; sourceTree = "<group>"; };
+		9A5157D81EEF033E005CA642 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		9A5157FB1EEF0827005CA642 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iPadVideoPoker/Images.xcassets; sourceTree = "<group>"; };
 		9D0A83561174DB7700B48688 /* lose1.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = lose1.aif; path = audio/lose1.aif; sourceTree = "<group>"; };
 		9D0A83571174DB7700B48688 /* menu_press1.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = menu_press1.aif; path = audio/menu_press1.aif; sourceTree = "<group>"; };
 		9D0A83581174DB7700B48688 /* menu_press2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = menu_press2.aif; path = audio/menu_press2.aif; sourceTree = "<group>"; };
@@ -212,7 +214,6 @@
 		E35840EC1168304D009D6D08 /* PayTableView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PayTableView.mm; sourceTree = "<group>"; };
 		E364843B1178DF36003E8F01 /* ComposedCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposedCardView.h; sourceTree = "<group>"; };
 		E364843C1178DF36003E8F01 /* ComposedCardView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ComposedCardView.mm; sourceTree = "<group>"; };
-		E36622561185201600877255 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		E36BEC7511951C4F00EF0604 /* TextColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextColumnView.h; sourceTree = "<group>"; };
 		E36BEC7611951C4F00EF0604 /* TextColumnView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextColumnView.mm; sourceTree = "<group>"; };
 		E3826A18115756E1006A6E37 /* VideoPokerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPokerView.h; sourceTree = "<group>"; };
@@ -327,7 +328,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				E36622561185201600877255 /* Entitlements.plist */,
+				9A5157D81EEF033E005CA642 /* Entitlements.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -344,6 +345,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9A5157FB1EEF0827005CA642 /* Images.xcassets */,
 				E39846C2116EE57B00AA515F /* sounds */,
 				E37BA7FF11580D7200EE8C16 /* images */,
 				2899E5210DE3E06400AC0155 /* iPadVideoPokerViewController.xib */,
@@ -544,6 +546,7 @@
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 7PA4NY5TKH;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -613,6 +616,7 @@
 				9D0A835E1174DB7700B48688 /* menu_press1.aif in Resources */,
 				9D0A835F1174DB7700B48688 /* menu_press2.aif in Resources */,
 				9D0A83601174DB7700B48688 /* win1.aif in Resources */,
+				9A5157FC1EEF0827005CA642 /* Images.xcassets in Resources */,
 				9D0A83901174EEEC00B48688 /* holdCard2_vol-10.aif in Resources */,
 				9D0A83D81174FB7800B48688 /* button_press10.aif in Resources */,
 				E32054F51178075000DA073A /* NewGameViewController.xib in Resources */,
@@ -633,7 +637,6 @@
 				9DA66F2A117BD50D00589E78 /* success3.png in Resources */,
 				E3A99DAC117E095D0025842C /* Default-Portrait.png in Resources */,
 				E390AB38118250F400B7DEC6 /* Default-Landscape.png in Resources */,
-				E36622571185201600877255 /* Entitlements.plist in Resources */,
 				9DB592A0118566D60075919C /* ambient_loop_final_01.m4a in Resources */,
 				8EBB6D5D11FCCB4C00741D8E /* SettingsPopoverViewController.xib in Resources */,
 			);
@@ -684,13 +687,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 7PA4NY5TKH;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -705,6 +709,7 @@
 				PRODUCT_NAME = PokerPad;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -712,9 +717,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 7PA4NY5TKH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPadVideoPoker_Prefix.pch;
 				INFOPLIST_FILE = "iPadVideoPoker-Info.plist";
@@ -726,6 +736,7 @@
 				);
 				PRODUCT_NAME = iPadVideoPoker;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -791,10 +802,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 7PA4NY5TKH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPadVideoPoker_Prefix.pch;
 				INFOPLIST_FILE = "iPadVideoPoker-Info.plist";
@@ -807,6 +822,7 @@
 				PRODUCT_NAME = iPadVideoPoker;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
