@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,6 +18,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <point key="canvasLocation" x="117" y="115"/>
         </window>
         <customObject id="6" userLabel="iPadVideoPoker App Delegate" customClass="iPadVideoPokerAppDelegate">
             <connections>
@@ -58,11 +57,12 @@
                 <outlet property="settingsViewController" destination="28" id="43"/>
                 <outlet property="tabBar1" destination="26" id="40"/>
             </connections>
+            <point key="canvasLocation" x="-2" y="755"/>
         </tabBarController>
     </objects>
     <resources>
-        <image name="tabBar_games.png" width="32" height="26"/>
-        <image name="tabBar_gears.png" width="32" height="26"/>
-        <image name="tabBar_stats.png" width="32" height="26"/>
+        <image name="tabBar_games.png" width="32.450702667236328" height="26.36619758605957"/>
+        <image name="tabBar_gears.png" width="32.450702667236328" height="26.36619758605957"/>
+        <image name="tabBar_stats.png" width="32.450702667236328" height="26.36619758605957"/>
     </resources>
 </document>

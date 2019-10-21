@@ -94,7 +94,7 @@
 
 
 - (void) hideAllHoldIndicators;
-- (void) init;
+- (id) init;
 - (void) hideHoldIndicator:(BOOL)hideIt forCase:(int)whichCase;
 - (void) showDrawState;
 - (void) showDealState;

@@ -43,13 +43,13 @@ void uncaughtExceptionHandler(NSException *exception) {
 	
 	
 	
-	int bankMoney = [defaults integerForKey:@"bankMoney"];
+	int bankMoney = (int)[defaults integerForKey:@"bankMoney"];
 	if(bankMoney == 0) 
 		bankMoney = INITIAL_WALLET;
 	cgm->GetBank()->deposit(bankMoney);
 	
 	
-	int currentSelectedPayTable = [defaults integerForKey:@"currentSelectedPayTable"];
+	int currentSelectedPayTable = (int)[defaults integerForKey:@"currentSelectedPayTable"];
 	BOOL payTableSelected = [defaults boolForKey:@"payTableSelected"];
 	currentSelectedPayTable = ( (currentSelectedPayTable < (int) PAYTABLE_LAST ) && (currentSelectedPayTable >= 0)) ? currentSelectedPayTable : 0;
 	cgm->currentPayTable.setCurrentPayTable((PayTableType)currentSelectedPayTable);
@@ -61,15 +61,15 @@ void uncaughtExceptionHandler(NSException *exception) {
 		[pokerTabBarController setSelectedIndex:1];
 	}
 
-	cgm->pokerStats.GamesWonStat			= [defaults integerForKey:@"GamesWonStat"];
-	cgm->pokerStats.GamesLostStat			= [defaults integerForKey:@"GamesLostStat"];
-	cgm->pokerStats.CreditsWonStat			= [defaults integerForKey:@"CreditsWonStat"];
-	cgm->pokerStats.CreditsLostStat			= [defaults integerForKey:@"CreditsLostStat"];
-	cgm->pokerStats.MostCreditsWonStat		= [defaults integerForKey:@"MostCreditsWonStat"];
-	cgm->pokerStats.LongestWinStreakStat	= [defaults integerForKey:@"CurrentWinStreak"];
-	cgm->pokerStats.CurrentWinStreak		= [defaults integerForKey:@"LongestWinStreakStat"];
-	cgm->pokerStats.LongestLoseStreakStat	= [defaults integerForKey:@"LongestLoseStreakStat"];
-	cgm->pokerStats.CurrentLoseStreak		= [defaults integerForKey:@"CurrentLoseStreak"];
+	cgm->pokerStats.GamesWonStat			= (int)[defaults integerForKey:@"GamesWonStat"];
+	cgm->pokerStats.GamesLostStat			= (int)[defaults integerForKey:@"GamesLostStat"];
+	cgm->pokerStats.CreditsWonStat			= (int)[defaults integerForKey:@"CreditsWonStat"];
+	cgm->pokerStats.CreditsLostStat			= (int)[defaults integerForKey:@"CreditsLostStat"];
+	cgm->pokerStats.MostCreditsWonStat		= (int)[defaults integerForKey:@"MostCreditsWonStat"];
+	cgm->pokerStats.LongestWinStreakStat	= (int)[defaults integerForKey:@"CurrentWinStreak"];
+	cgm->pokerStats.CurrentWinStreak		= (int)[defaults integerForKey:@"LongestWinStreakStat"];
+	cgm->pokerStats.LongestLoseStreakStat	= (int)[defaults integerForKey:@"LongestLoseStreakStat"];
+	cgm->pokerStats.CurrentLoseStreak		= (int)[defaults integerForKey:@"CurrentLoseStreak"];
 	if((cgm->pokerStats.GamesWonStat == 0) && (cgm->pokerStats.GamesLostStat == 0)) 
 	{
 		cgm->pokerStats.GamesWonStat			= 0;

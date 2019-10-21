@@ -45,7 +45,7 @@ SaveUserState* SUS_Instance;
 - (int) readUserIntValueForKey:(NSString*)Key
 {
 	[self setUpDefaults];
-	return [defaults integerForKey:Key];
+	return (int)[defaults integerForKey:Key];
 	
 }
 

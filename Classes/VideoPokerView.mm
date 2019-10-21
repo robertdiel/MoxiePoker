@@ -48,7 +48,7 @@
     return self;
 }
 
-- (void) init
+- (id) init
 {
 	[self populateOrigins];
 
@@ -77,6 +77,8 @@
 	[payTablePanel init];
 	[pokerChipView showChip];
 	SuccessImage.alpha = 0;
+    
+    return self;
 	
 }
 - (void) populateOrigin:(CGPoint*)point withX:(int)x andY:(int)y
@@ -188,7 +190,7 @@
 	DrawButton.enabled = true;
 	statsButton.selected = NO;
 	statsPanel.BackButton.selected = YES; 
-	if(DrawButton.titleLabel.text == @"Deal")
+    if([DrawButton.titleLabel.text  isEqual: @"Deal"])
 	{
 		MoreGamesButton.enabled = true;
 	}
@@ -207,7 +209,7 @@
 - (void) showStatsPanel
 {	
 	
-	if(DrawButton.titleLabel.text == @"Deal")
+    if([DrawButton.titleLabel.text  isEqual: @"Deal"])
 	{
 		MoreGamesButton.enabled = true;
 	}

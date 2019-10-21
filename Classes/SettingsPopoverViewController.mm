@@ -67,7 +67,7 @@
 {
     //the saved state for the SoundFX button will be use to determine if a sound effect should be played back
 	[saveState saveUserBoolValue:SoundEffectsSwitch.on forKey:@"soundFXOn"];
-	iPadVideoPokerAppDelegate* videoPokerAppDelegate = ((iPadVideoPokerAppDelegate *)[UIApplication sharedApplication].delegate);
+//	iPadVideoPokerAppDelegate* videoPokerAppDelegate = ((iPadVideoPokerAppDelegate *)[UIApplication sharedApplication].delegate);
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Overriden to allow any orientation.

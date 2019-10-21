@@ -10,7 +10,7 @@
 #define __CARDIMAGEFACTORY_H
 
 #include "PlayingCard.h"
-#include <String>
+#include <string>
 
 
 class CardImageFactory
